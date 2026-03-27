@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<h1>Welcome <span id="user"></span></h1>
+
+<div class="main">
+
+    <div class="card">
+        <h3>Add Expense</h3>
+        <input id="desc" placeholder="Description">
+        <input id="amount" type="number" placeholder="Amount">
+        <select id="category">
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+        </select>
+        <button onclick="addExpense()">Add</button>
+    </div>
+
+    <div class="card">
+        <h3>Set Limit</h3>
+        <input id="limit" type="number">
+        <select id="time">
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+        </select>
+        <button onclick="setLimit()">Save</button>
+    </div>
+
+</div>
+
+<div class="card full">
+    <h3>Spending Overview</h3>
+    <ul id="list"></ul>
+</div>
+
+<div class="card full">
+    <h3>Sense Analysis</h3>
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

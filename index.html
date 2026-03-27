@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="lamp"></div>
+
+<div class="login-box">
+    <h2>SpendSense</h2>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="login()">Enter</button>
+</div>
+
+<script>
+function login(){
+    let user = document.getElementById("username").value;
+    if(user){
+        localStorage.setItem("currentUser", user);
+        window.location.href = "dashboard.html";
+    }
+}
+</script>
+
+</body>
+</html>
